@@ -28,7 +28,7 @@ const App = () => {
 
   return (
     <Router>
-      {loading ? <div>Loading</div> : (<>
+      {loading ? <div>Loading</div> : (<div className="custom-cursor-image">
         <Header />
         <Routes>
           <Route path="/" element={<Home youtubes={user.youtube}
@@ -51,7 +51,7 @@ const App = () => {
             element={isAuthenticated ? <Project /> : <Login />} />
         </Routes>
         <Footer />
-      </>
+      </div>
       )}
     </Router>
   )
